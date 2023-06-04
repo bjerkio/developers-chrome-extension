@@ -1,9 +1,8 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -26,13 +25,20 @@ jobs:
       - name: Build 🏗️
         run: pnpm build
 
-      - id: get_version
-        name: Get version
-        uses: jannemattila/get-version-from-tag@v1
+      - name: Set version to release tag 📝
+        shell: bash
+        run: pnpm version from-git --no-commit-hooks --no-git-tag-version
 
-      - run: zip dist/ chrome-extension-${{ steps.get_version.outputs.version }}.zip
+      - name: Push version changes to main branch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'chore: release ${{ github.event.release.tag_name }}'
+          branch: ${{ github.event.repository.default_branch }}
+          file_pattern: package.json
+
+      - run: zip dist/ chrome-extension-${{ github.event.release.tag_name }}.zip
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: chrome-extension-${{ steps.get_version.outputs.version }}.zip
+          files: chrome-extension-${{ github.event.release.tag_name }}.zip
