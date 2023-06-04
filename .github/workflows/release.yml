@@ -27,7 +27,7 @@ jobs:
 
       - name: Set version to release tag 📝
         shell: bash
-        run: pnpm version from-git --no-commit-hooks --no-git-tag-version
+        run: pnpm version from-git --no-commit-hooks --no-git-tag-version --allow-same-version
 
       - name: Push version changes to main branch
         uses: stefanzweifel/git-auto-commit-action@v4
