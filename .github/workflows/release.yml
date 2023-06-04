@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+
+      - name: Use Node LTS ✨
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install dependencies 📦️
+        run: pnpm install --frozen-lockfile
+
+      - name: Build 🏗️
+        run: pnpm build
+
+      - id: get_version
+        name: Get version
+        uses: jannemattila/get-version-from-tag@v1
+
+      - run: zip dist/ chrome-extension-${{ steps.get_version.outputs.version }}.zip
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: chrome-extension-${{ steps.get_version.outputs.version }}.zip
