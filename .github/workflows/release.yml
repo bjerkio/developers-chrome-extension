@@ -41,7 +41,7 @@ jobs:
           FILENAME: bjerk-chrome-extension-${{ github.event.release.tag_name }}
         run: |
           mv dist $FILENAME
-          zip -r "$FILENAME" $FILENAME/
+          zip -r "$FILENAME.zip" $FILENAME/
 
       - name: Release
         uses: softprops/action-gh-release@v1
