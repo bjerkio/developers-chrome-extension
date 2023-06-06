@@ -29,7 +29,7 @@ run it using development mode in Chrome.
 ## Contributing
 
 We are happy to receive any contributions to this project. If you want to
-contribute, please read our [contributing guidelines](CONTRIBUTING.md).
+contribute, please open an issue or a pull request.
 
 ## Development
 
