@@ -21,6 +21,7 @@ still want to try it out, you can download the ZIP for our latest release and
 run it using development mode in Chrome.
 
 [🚀 Install the extension](https://chrome.google.com/webstore/detail/pdnphclnmjimapfnmpliiilihgkmnmkc)
+
 **Note**: Currently, only Bjerk employees can use the link above.
 
 [dogfooding]: https://www.nytimes.com/2022/11/14/business/dogfooding.html
