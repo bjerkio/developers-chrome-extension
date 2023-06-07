@@ -1,16 +1,16 @@
 ![image](https://github.com/bjerkio/chrome-extension/assets/3726815/ebc97ca6-550a-4b9e-a871-af2c8b60d19a)
 
-[Bjerk] believes we can improve our lives by changing how we think, learn,
-communicate and work, and currently, we do that by creating digital products. A
-critical factor in this is user experience, which is hard. To improve the
-experience, we sometimes need to experiment and show a subset of features and
-communicate with our users, stakeholders, and our team.
+At [Bjerk], we're all about making your life better by changing the way we
+think, learn, communicate, and work. We do this by making digital products. A
+big part of this is making sure our users have a great experience, which can be
+tough.
 
-Using a [Chrome Extension][chrome-ext] – we can show features for a selection of
-users, communicate about changes, and, most of all, create a better experience
-for everyone.
+That's where our Chrome Extension comes in. It lets us test out new features
+with some users, tell people about updates, and overall, make things better for
+everyone. This tool helps us communicate with you, our team, and our
+stakeholders more effectively. It's our way of making sure everyone has the best
+experience possible.
 
-[chrome-ext]: https://developer.chrome.com/docs/extensions/
 [bjerk]: https://bjerk.io
 
 ## How to use it
