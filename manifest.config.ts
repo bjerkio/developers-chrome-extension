@@ -33,7 +33,7 @@ export default defineManifest(async env => ({
     type: 'module',
   },
 
-  permissions: ['declarativeNetRequest'],
+  permissions: ['declarativeNetRequest', 'cookies'],
 
   host_permissions: ['*://*/*'],
 

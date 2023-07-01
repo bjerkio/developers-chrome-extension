@@ -2,7 +2,7 @@ const allResourceTypes = Object.values(
   chrome.declarativeNetRequest.ResourceType,
 );
 
-const hosts = ['*.bjerk.io/*', '*.bjerk.dev/*'];
+const hosts = ['bjerk.io', 'bjerk.dev'];
 
 const rules: chrome.declarativeNetRequest.Rule[] = [
   ...hosts.map((host, i) => ({
@@ -19,7 +19,7 @@ const rules: chrome.declarativeNetRequest.Rule[] = [
       ],
     },
     condition: {
-      urlFilter: host,
+      urlFilter: `*.${host}/*`,
       resourceTypes: allResourceTypes,
     },
   })),
@@ -29,3 +29,12 @@ chrome.declarativeNetRequest.updateDynamicRules({
   removeRuleIds: rules.map(rule => rule.id), // remove existing rules
   addRules: rules,
 });
+
+// TODO: Figure out a way to ensure cookies are set when they are unset.
+hosts.map(host =>
+  chrome.cookies.set({
+    url: `https://${host}`,
+    name: 'x-team-id',
+    value: 'bjerk',
+  }),
+);
