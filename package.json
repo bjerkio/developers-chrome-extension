@@ -16,7 +16,7 @@
   "devDependencies": {
     "@bjerk/eslint-config": "^4.1.0",
     "@crxjs/vite-plugin": "2.0.0-beta.18",
-    "@simenandre/prettier": "^3.0.2",
+    "@simenandre/prettier": "^4.0.0",
     "@types/chrome": "^0.0.239",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",

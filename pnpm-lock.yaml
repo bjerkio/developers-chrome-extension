@@ -20,8 +20,8 @@ devDependencies:
     specifier: 2.0.0-beta.18
     version: 2.0.0-beta.18
   '@simenandre/prettier':
-    specifier: ^3.0.2
-    version: 3.0.2(eslint@8.42.0)(prettier@2.8.8)(typescript@5.1.3)
+    specifier: ^4.0.0
+    version: 4.0.0(eslint@8.42.0)(prettier@2.8.8)
   '@types/chrome':
     specifier: ^0.0.239
     version: 0.0.239
@@ -660,19 +660,15 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@simenandre/prettier@3.0.2(eslint@8.42.0)(prettier@2.8.8)(typescript@5.1.3):
-    resolution: {integrity: sha512-r8uJuUBm+sjn2/wACtHcbPsXSaewN2e10bKHDBWi7p8t+J+vedjuqTTWZDf0LLGM97WgrGk10DN4wPCdMf1Ypw==}
+  /@simenandre/prettier@4.0.0(eslint@8.42.0)(prettier@2.8.8):
+    resolution: {integrity: sha512-d8XsXesnw+v1wEOVQfCtQypNCyA1ilgt31HWXjN00zL5WArr868BqdJgpDHv+beCDYVtQb8HztT/cfJMd586qQ==}
     peerDependencies:
       prettier: ^2.8.8
     dependencies:
       prettier: 2.8.8
-      prettier-plugin-organize-imports: 3.2.2(prettier@2.8.8)(typescript@5.1.3)
       prettier-plugin-package-perfection: 1.1.0(eslint@8.42.0)
     transitivePeerDependencies:
-      - '@volar/vue-language-plugin-pug'
-      - '@volar/vue-typescript'
       - eslint
-      - typescript
     dev: true
 
   /@types/chrome@0.0.239:
@@ -2503,23 +2499,6 @@ packages:
       parse-author: 2.0.0
       sort-object-keys: 1.1.3
       sort-order: 1.0.1
-    dev: true
-
-  /prettier-plugin-organize-imports@3.2.2(prettier@2.8.8)(typescript@5.1.3):
-    resolution: {integrity: sha512-e97lE6odGSiHonHJMTYC0q0iLXQyw0u5z/PJpvP/3vRy6/Zi9kLBwFAbEGjDzIowpjQv8b+J04PDamoUSQbzGA==}
-    peerDependencies:
-      '@volar/vue-language-plugin-pug': ^1.0.4
-      '@volar/vue-typescript': ^1.0.4
-      prettier: '>=2.0'
-      typescript: '>=2.9'
-    peerDependenciesMeta:
-      '@volar/vue-language-plugin-pug':
-        optional: true
-      '@volar/vue-typescript':
-        optional: true
-    dependencies:
-      prettier: 2.8.8
-      typescript: 5.1.3
     dev: true
 
   /prettier-plugin-package-perfection@1.1.0(eslint@8.42.0):
