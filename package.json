@@ -33,6 +33,6 @@
   "engines": {
     "node": "18.14.0"
   },
-  "packageManager": "pnpm@8.6.0",
+  "packageManager": "pnpm@8.6.5",
   "prettier": "@simenandre/prettier"
 }
