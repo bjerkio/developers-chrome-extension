@@ -1,7 +1,7 @@
 {
-  "private": true,
   "name": "@bjerk/chrome-extension",
   "version": "1.2.1",
+  "private": true,
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
@@ -9,9 +9,10 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint src --ext ts,tsx",
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
+  "prettier": "@simenandre/prettier",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -33,9 +34,11 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
   },
+  "packageManager": "pnpm@8.6.7",
   "engines": {
     "node": "18.16.1"
   },
-  "packageManager": "pnpm@8.6.7",
-  "prettier": "@simenandre/prettier"
+  "volta": {
+    "node": "18.16.1"
+  }
 }
