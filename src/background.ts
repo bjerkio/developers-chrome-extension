@@ -2,7 +2,7 @@ const allResourceTypes = Object.values(
   chrome.declarativeNetRequest.ResourceType,
 );
 
-const hosts = ['bjerk.io', 'bjerk.dev'];
+const hosts = ['bjerk.io', 'bjerk.dev', 'branches.no'];
 
 const rules: chrome.declarativeNetRequest.Rule[] = [
   ...hosts.map((host, i) => ({
